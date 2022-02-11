@@ -24,13 +24,21 @@
                     <h3 class="text-5xl">
                          $ 
                          <span id="withdraw-text">
-                            100
+                            00
                             </span> 
                         </h3>
                 </div>
                 <div class="bg-yellow-200 p-8 rounded ">
                     <h3 class="text-2xl">Balance </h3>
-                    <h3 class="text-5xl"> $<span id="previous-balance-text" >1200</span></h3>
+                    <h3 
+                        class="text-5xl"> 
+                        $
+                        <span 
+                        id="previous-balance-text" 
+                        >
+                        1200
+                    </span>
+                </h3>
                 </div>
            
             </div>
@@ -74,32 +82,7 @@
         </section>
     </main>
     <script>
-        document.getElementById('withdraw-button').addEventListener('click', function(){
-            // step 2: catching withdraw input field
-            const withdrawInput = document.getElementById('withdraw-input');
-            const withdrawText = withdrawInput.value;
-            const withdrawInputAmount = parseFloat(withdrawText);
-            // console.log(withdrawAmount);
-            // step 3: catching withdraw amount text field
-            const withdrawTextField = document.getElementById('withdraw-text');
-            const withdrawTextValue = withdrawTextField.innerText;
-            const withdrawAmount = parseFloat(withdrawTextValue);
-            // step 4: total withdraw amount
-            const withdrawTotal = withdrawInputAmount + withdrawAmount;
-            // console.log(withdrawTotal);
-            withdrawTextField.innerText = withdrawTotal;
-            // my questions why not working???
-            // withdrawTextValue = withdrawTotal;  
-
-            // step 5: total Account balance after total withdraw
-            const previousAccountField = document.getElementById('previous-balance-text');
-            const previousAccountText = previousAccountField.innerText;
-            const previousAccountBalance = parseFloat(previousAccountText);
-            // console.log(previousAccountBalance);
-            
-
-
-        })
+     
     </script>
     <script src="js/banking.js"></script>
 </body>

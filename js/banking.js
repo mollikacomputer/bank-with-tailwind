@@ -25,3 +25,40 @@ document.getElementById('deposit-button').addEventListener('click', function(){
     //  console.log(updateAccountBalance);
 })
 
+  // step 1: withdraw button event
+  document.getElementById('withdraw-button').addEventListener('click', function(){
+    // step 2: catching withdraw input field
+    const withdrawInput = document.getElementById('withdraw-input');
+    const withdrawText = withdrawInput.value;
+    const withdrawInputAmount = parseFloat(withdrawText);
+    // console.log(withdrawAmount);
+    // step 3: catching withdraw amount text field
+    const withdrawTextField = document.getElementById('withdraw-text');
+    const withdrawTextValue = withdrawTextField.innerText;
+    const withdrawAmount = parseFloat(withdrawTextValue);
+    // step 4: total withdraw amount
+    const withdrawTotal = withdrawInputAmount + withdrawAmount;
+    // console.log(withdrawTotal);
+    withdrawTextField.innerText = withdrawTotal;
+    // my questions why not working???
+    // withdrawTextValue = withdrawTotal;  
+
+    // step 5: total Account balance after total withdraw
+    const previousAccountField = document.getElementById('previous-balance-text');
+    const previousAccountText = previousAccountField.innerText;
+    const previousAccountBalance = parseFloat(previousAccountText);
+    // console.log(previousAccountBalance);
+    // step 6: previous total balance
+        const previousTotalBalanceText = document.getElementById('previous-balance-text');
+        const previousTotalBalance = previousTotalBalanceText.innerText;
+        const previousTotalAccountBalance = parseFloat(previousTotalBalance);
+        // step 7: total account balance amount after withdraw amount
+        const currentBalanceAfterWithdraw = previousTotalAccountBalance - withdrawInputAmount;
+        // looks good
+        // console.log(currentBalanceAfterWithdraw);
+        previousAccountField.innerText = currentBalanceAfterWithdraw;
+        // this code not working
+        withdrawInput.value = '';
+})
+
+
